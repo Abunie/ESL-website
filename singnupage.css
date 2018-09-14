@@ -1,0 +1,53 @@
+ body{
+    
+	background-image: url("country.jpg");
+	font-size-adjust: auto;
+}
+
+h1{
+	background-color: darkgreen;
+	color:black;
+	margin: 20px 25% 20px 25%;
+	text-align: center;
+	font-family: serif;
+	font-size: 100px;
+	border: 10px double;
+	
+}
+div{
+	color: white;
+	margin: 6%;
+	font-size: 15px;
+}
+form{
+	font-size: 20px;
+}
+        
+input{
+    
+	font-size: 30px;
+	
+}
+button{
+	font-size: 20px;
+	background-color: dodgerblue;
+	border: 2px;
+	border-radius: 5px;
+}
+.signup:hover {
+	background-color: blue;
+}
+#picture{
+	background: gray;
+	width: 90%;
+	
+}
+.col-8{
+	background-color: darkgreen;
+	padding-bottom: 20px;
+}
+textarea{
+	width: 85%;
+	
+}
+	

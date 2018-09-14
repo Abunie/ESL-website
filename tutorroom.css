@@ -1,0 +1,102 @@
+body {
+    background-color: #80b200;
+    color: black;
+    
+}
+* {box-sizing: border-box;}
+.col-11{
+	  margin: 1px 0 25px 0;
+	  text-align: center;
+	  
+}
+
+.container {
+  position: relative;
+  width: 50%;
+  max-width: 130px;
+}
+
+.image {
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+.container {
+
+    border: 2px solid #dedede;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100px;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+   div#container0 {
+
+	margin: 0 auto;
+	background: darkgreen ;
+    border-width:4px;
+	border: 10px solid;
+	border-bottom-color: gold;
+	zoom: 1;
+}
+li {
+    float: right;
+	border: 2px solid;
+	border-color: gold;
+	border-style: outset;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+}
+
+li a:hover{ 
+	background-color: black;
+         color: white;
+     font-size-adjust: none;
+}
+li a {
+
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+}
+
+button{
+	background-color: gold;
+	border: 5px solid;
+	border-style: outset;
+	
+}
+input{
+	border: 3px solid;
+	border-style: outset;
+}
+button:hover{
+	background-color: darkgreen;
+}
+form{
+	margin: 0 0 5px 50px;
+}

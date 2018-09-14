@@ -1,0 +1,32 @@
+body{
+	background-image: url("country.jpg");
+	margin: 0 2% 0 2%;	
+}	
+
+h1{
+	background: white;
+	border: 25px solid;
+	border-color: darkblue;
+	border-style: outset;
+	font-size: 60px;
+	border-radius: 25px;
+}
+.form-control{
+	width: 80% ;
+	font-size: 20px;
+}
+
+.col-8{
+	border: 30px;
+	border-color: green;
+	border-style: inset;
+	font-size: 25px;
+	background-color: darkgreen;
+	padding: 5px 0 20px 20px;
+}
+.col-6{
+	padding: 20px;
+	background-color: white;
+	margin: 20px;
+}
+

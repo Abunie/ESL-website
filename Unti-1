@@ -1,0 +1,138 @@
+$my_query = "INSERT INTO Relationship(userone_id,usertwo_id,status, actionuser_id) VALUES ('$user_one_id', '$user_two_id','0', '$action_user_id')";
+    echo "<br>";
+    
+    $result = mysqli_query($connection, $my_query);
+    
+    if($result)
+    {
+        echo  "Item Successfully Added!";
+        
+    }
+    
+    else
+    {
+        echo "<b>ERROR: unable to post </b>";
+        
+    }
+    
+
+
+
+
+    $my_query = "SELECT *FROM Relationship WHERE userone_id='$user_one_id' AND usertwo_id='$user_two_id'";
+    echo "<br>";
+    
+    $result = mysqli_query($connection, $my_query);
+    
+    if($result)
+    {
+        echo  "Item Successfully Added!";  
+    }
+    
+    else
+    {
+        echo "<b>ERROR: unable to post </b>";
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    $my_query = "SELECT *FROM Relationship WHERE userone_id='$user_one_id' AND usertwo_id='$user_two_id'";
+echo "<br>";
+$result = mysqli_query($connection, $my_query);
+$trws= mysqli_num_rows($result);
+ if ($trws>=1){
+     echo "no";      
+ }
+else{
+    echo " try";
+}
+
+
+//////////////////////////////////
+
+
+<h2>Chat Messages</h2>
+<div class="container">
+  <img src="/w3images/bandmember.jpg" alt="Avatar" style="width:100%;">
+  <p>Hello. How are you today?</p>
+  <span class="time-right">11:00</span>
+</div>
+
+<div class="container darker">
+  <img src="/w3images/avatar_g2.jpg" alt="Avatar" class="right" style="width:100%;">
+  <p>Hey! I'm fine. Thanks for asking!</p>
+  <span class="time-left">11:01</span>
+</div>
+
+<div class="container">
+  <img src="/w3images/bandmember.jpg" alt="Avatar" style="width:100%;">
+  <p>Sweet! So, what do you wanna do today?</p>
+  <span class="time-right">11:02</span>
+</div>
+
+<div class="container darker">
+  <img src="/w3images/avatar_g2.jpg" alt="Avatar" style="width:100%;">
+  <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+  <span class="time-left">11:05</span>
+</div>
+<div class="container">
+  <img src="/w3images/bandmember.jpg" alt="Avatar" style="width:100%;">
+  <p>Sweet! So, what do you wanna do today?</p>
+  <span class="time-right">11:02</span>
+</div>
+<div class="container darker">
+  <img src="/w3images/avatar_g2.jpg" alt="Avatar" style="width:100%;">
+  <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+  <span class="time-left">11:05</span>
+    </div>
+    ///////////////////////
+    <div class="container darker">
+          <img src="/w3images/avatar_g2.jpg" alt="Avatar" class="right" style="width:100%;">
+          <p></p>
+          <span class="time-left">11:01</span>
+        </div>
+////////////
+
+
+<?php
+        $sql="SELECT * FROM Messages WHERE (author='$b'AND reciepent='$a') OR (reciepent='$b'AND author='$a') ";
+        $result=  mysqli_query($connection,$sql) or die(mysqli_errno());
+        $trws= mysqli_num_rows($result);
+        for ($x=0; $x=$trws;$x++){
+            $rws=mysqli_fetch_array($result,MYSQL_ASSOC);
+            print_r($rws);
+            if($rws['author']=$b and  $rws['reciepent']=$a){
+    ?>
+           <?php    echo <<<_END       
+                           <div class="container">
+                         <img src="/w3images/bandmember.jpg" alt="Avatar" style="width:100%;">
+                              <p> $rws['message'] </p>
+                              <span class="time-right">$rws['time']</span>
+                            </div>
+                    _END;
+                            ?>
+       <?php
+                
+            }
+           else{
+                print_r($rws);
+                ?>
+             
+             <div class="container darker">
+                         <img src="/w3images/bandmember.jpg" alt="Avatar" style="width:100%;">
+                              <p><?php echo"".$rws['message']."</p>";  ?> 
+                              <span class="time-right"><?php echo "".$rws['time']."" ;?></span>
+                            </div>
+<?php
+         }
+           
+        }
+ ?>
+   
+
